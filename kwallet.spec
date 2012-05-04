@@ -5,7 +5,7 @@ Release: 1
 Group:      Graphical desktop/KDE
 License:    GPLv2 LGPLv2
 URL:        http://www.kde.org/applications/system/kwalletmanager/
-Source0:    ftp://ftp.kde.org/pub/kde/unstable/%{version}/src/%name-%{version}.tar.xz
+Source0:    ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%name-%{version}.tar.xz
 
 
 BuildRequires: kdelibs4-devel >= 2:%version
