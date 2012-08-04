@@ -1,11 +1,11 @@
 Name:		kwallet
 Summary:	KDE Wallet Management Tool
-Version:	4.8.97
-Release:	1
+Version: 4.9.0
+Release: 1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2
 URL:		http://www.kde.org/applications/system/kwalletmanager/
-Source:		ftp://ftp.kde.org/pub/kde/unstable/%{version}/src/%{name}-%{version}.tar.xz
+Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 Conflicts:	kdeutils4-core < 4.5.72
 Requires:	kdebase4-runtime
