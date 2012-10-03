@@ -1,6 +1,6 @@
 Name:		kwallet
 Summary:	KDE Wallet Management Tool
-Version: 4.9.0
+Version: 4.9.2
 Release: 1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2
