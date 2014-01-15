@@ -2,9 +2,9 @@ Name:		kwallet
 Summary:	KDE Wallet Management Tool
 Version:	4.12.1
 Release:	1
-Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2
-URL:		http://www.kde.org/applications/system/kwalletmanager/
+Group:		Graphical desktop/KDE
+Url:		http://www.kde.org/applications/system/kwalletmanager/
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 Conflicts:	kdeutils4-core < 4.5.72
@@ -20,6 +20,7 @@ to manage all your passwords.
 %doc %{_kde_docdir}/HTML/en/kwallet/
 %{_kde_bindir}/kwalletmanager
 %{_kde_appsdir}/kwalletmanager
+%{_kde_libdir}/kde4/libexec/kcm_kwallet_helper
 %{_kde_libdir}/kde4/kcm_kwallet.so
 %{_kde_iconsdir}/*/*/apps/kwalletmanager2.*
 %{_kde_iconsdir}/*/*/apps/kwalletmanager.*
@@ -27,6 +28,9 @@ to manage all your passwords.
 %{_kde_applicationsdir}/kwalletmanager.desktop
 %{_kde_services}/kwalletconfig.desktop
 %{_kde_services}/kwalletmanager_show.desktop
+%{_sysconfdir}/dbus-1/system.d/org.kde.kcontrol.kcmkwallet.conf
+%{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmkwallet.service
+%{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmkwallet.policy
 
 #------------------------------------------------------------------------------
 
@@ -43,6 +47,7 @@ to manage all your passwords.
 %changelog
 * Tue Jan 14 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.1-1
 - New version 4.12.1
+- Update files
 
 * Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.4-1
 - New version 4.11.4
