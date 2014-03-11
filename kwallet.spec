@@ -1,11 +1,11 @@
-Name:		kwallet
 Summary:	KDE Wallet Management Tool
-Version:	4.12.2
+Name:		kwallet
+Version:	4.12.3
 Release:	1
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/system/kwalletmanager/
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/kwalletmanager-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 Conflicts:	kdeutils4-core < 4.5.72
 Requires:	kdebase4-runtime
@@ -35,7 +35,7 @@ to manage all your passwords.
 #------------------------------------------------------------------------------
 
 %prep
-%setup -q
+%setup -q -n kwalletmanager-%{version}
 
 %build
 %cmake_kde4
@@ -45,6 +45,10 @@ to manage all your passwords.
 %makeinstall_std -C build
 
 %changelog
+* Tue Mar 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.3-1
+- New version 4.12.3
+- Source is renamed to kwalletmanager in upstream
+
 * Tue Feb 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.2-1
 - New version 4.12.2
 
