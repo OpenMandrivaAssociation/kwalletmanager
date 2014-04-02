@@ -1,6 +1,6 @@
 Summary:	KDE Wallet Management Tool
 Name:		kwallet
-Version:	4.12.3
+Version:	4.12.4
 Release:	1
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
@@ -45,6 +45,9 @@ to manage all your passwords.
 %makeinstall_std -C build
 
 %changelog
+* Wed Apr 02 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.4-1
+- New version 4.12.4
+
 * Tue Mar 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.3-1
 - New version 4.12.3
 - Source is renamed to kwalletmanager in upstream
