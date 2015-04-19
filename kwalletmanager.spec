@@ -1,6 +1,6 @@
 Summary:	KDE Wallet Management Tool
 Name:		kwallet
-Version:	4.14.3
+Version:	15.04.0
 Release:	1
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
