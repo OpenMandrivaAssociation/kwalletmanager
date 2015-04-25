@@ -1,11 +1,13 @@
 Summary:	KDE Wallet Management Tool
-Name:		kwallet
+Name:		kwalletmanager
 Version:	15.04.0
 Release:	1
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/system/kwalletmanager/
 Source:		http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	cmake(ECM)
+BuildRequires:	ninja
 BuildRequires:	kdelibs4-devel
 Conflicts:	kdeutils4-core < 4.5.72
 Requires:	kde-runtime
@@ -38,11 +40,11 @@ to manage all your passwords.
 %setup -q -n kwalletmanager-%{version}
 
 %build
-%cmake_kde4
-%make
+%cmake_kde5
+ninja -C build
 
 %install
-%makeinstall_std -C build
+DESTDIR="%{buildroot}" ninja install -C build
 
 %changelog
 * Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.3-1
