@@ -42,4 +42,4 @@ to manage all your passwords.
 %make
 
 %install
-%makeinstall_std
+%makeinstall_std -C build
