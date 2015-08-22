@@ -6,9 +6,9 @@ License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/system/kwalletmanager/
 Source:		http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	kdelibs-devel
+BuildRequires:	cmake(ECM)
 Conflicts:	kdeutils4-core < 4.5.72
-Requires:	kde-runtime
+
 
 %description
 KDE Wallet Manager is for management of the wallets installed on the
