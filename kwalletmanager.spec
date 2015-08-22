@@ -7,6 +7,18 @@ Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/system/kwalletmanager/
 Source:		http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF5CoreAddons)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5Auth)
+BuildRequires:	cmake(KF5Wallet)
+BuildRequires:	cmake(KF5Service)
+BuildRequires:	cmake(KF5KCMUtils)
+BuildRequires:	cmake(KF5KDELibs4Support)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5ConfigWidgets)
+BuildRequires:	cmake(KF5DBusAddons)
 Conflicts:	kdeutils4-core < 4.5.72
 
 
