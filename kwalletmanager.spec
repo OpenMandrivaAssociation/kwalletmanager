@@ -39,7 +39,6 @@ to manage all your passwords.
 %{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmkwallet5.service
 %{_datadir}/kservices5/kwalletconfig5.desktop
 %{_datadir}/kservices5/kwalletmanager5_show.desktop
-%{_datadir}/kwalletmanager5
 %{_datadir}/kxmlgui5/kwalletmanager5
 %{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmkwallet5.policy
 %{_datadir}/icons/*/*/*/*
@@ -47,11 +46,11 @@ to manage all your passwords.
 #------------------------------------------------------------------------------
 
 %prep
-%setup -q -n kwalletmanager-%{version}
+%setup -q
+%cmake_kde5
 
 %build
-%cmake_kde5
-%ninja
+%ninja -C build
 
 %install
 %ninja_install -C build
