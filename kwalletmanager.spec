@@ -1,11 +1,12 @@
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	KDE Wallet Management Tool
 Name:		kwalletmanager
-Version:	16.12.2
+Version:	17.04.0
 Release:	1
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/system/kwalletmanager/
-Source:		http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5DocTools)
@@ -27,9 +28,8 @@ KDE Wallet Manager is for management of the wallets installed on the
 system. The KDE wallet subsystem provides a convenient and secure way
 to manage all your passwords.
 
-%files
+%files -f kwalletmanager.lang,kcmkwallet.lang,kwallet5.lang
 %doc COPYING COPYING.LIB TODO
-%doc %{_docdir}/HTML/en/kwallet5
 %{_sysconfdir}/dbus-1/system.d/org.kde.kcontrol.kcmkwallet5.conf
 %{_bindir}/kwalletmanager5
 %{_libdir}/libexec/kauth/kcm_kwallet_helper5
@@ -54,3 +54,6 @@ to manage all your passwords.
 
 %install
 %ninja_install -C build
+%find_lang kwalletmanager
+%find_lang kcmkwallet
+%find_lang kwallet5 --with-html

@@ -1,4 +1,2 @@
-removed_sources:
-  kwalletmanager-15.08.0.tar.xz: b392a53bc37ef2dd28667f1c02cf906f73ce305c
 sources:
-  kwalletmanager-16.12.2.tar.xz: af85ad246f76372e82075ee8754abebcc0842a58
+  kwalletmanager-17.04.0.tar.xz: 11c15f42e279364a8fe858466b1caf07e6177fab
