@@ -2,7 +2,7 @@
 Summary:	KDE Wallet Management Tool
 Name:		kwalletmanager
 Version:	 20.03.90
-Release:	1
+Release:	2
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/system/kwalletmanager/
