@@ -2,7 +2,7 @@
 Summary:	KDE Wallet Management Tool
 Name:		kwalletmanager
 Version:	 20.11.90
-Release:	1
+Release:	2
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/system/kwalletmanager/
@@ -43,6 +43,7 @@ to manage all your passwords.
 %{_datadir}/kxmlgui5/kwalletmanager5
 %{_datadir}/metainfo/org.kde.kwalletmanager5.appdata.xml
 %{_datadir}/icons/*/*/*/*
+%{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmkwallet5.policy
 
 #------------------------------------------------------------------------------
 
