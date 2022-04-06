@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	KDE Wallet Management Tool
 Name:		kwalletmanager
-Version:	 21.12.2
+Version:	 22.03.80
 Release:	1
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
@@ -40,10 +40,10 @@ to manage all your passwords.
 %{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmkwallet5.service
 %{_datadir}/kservices5/kwalletconfig5.desktop
 %{_datadir}/kservices5/kwalletmanager5_show.desktop
-%{_datadir}/kxmlgui5/kwalletmanager5
 %{_datadir}/metainfo/org.kde.kwalletmanager5.appdata.xml
 %{_datadir}/icons/*/*/*/*
 %{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmkwallet5.policy
+%{_datadir}/dbus-1/services/org.kde.kwalletmanager5.service
 
 #------------------------------------------------------------------------------
 
