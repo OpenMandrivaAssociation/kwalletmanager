@@ -2,7 +2,7 @@
 Summary:	KDE Wallet Management Tool
 Name:		plasma6-kwalletmanager
 Version:	24.01.90
-Release:	3
+Release:	1
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/system/kwalletmanager/
@@ -19,8 +19,10 @@ BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(KF6Config)
 BuildRequires:	cmake(KF6ConfigWidgets)
 BuildRequires:	cmake(KF6DBusAddons)
-Conflicts:	kdeutils4-core < 4.6.72
-
+BuildRequires:	cmake(KF6KIO)
+BuildRequires:	cmake(KF6WindowSystem)
+BuildRequires:	cmake(KF6Crash)
+BuildRequires:	cmake(KF6StatusNotifierItem)
 
 %description
 KDE Wallet Manager is for management of the wallets installed on the
