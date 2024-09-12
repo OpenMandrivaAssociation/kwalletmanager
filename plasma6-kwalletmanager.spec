@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	KDE Wallet Management Tool
 Name:		plasma6-kwalletmanager
-Version:	24.08.0
+Version:	24.08.1
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
@@ -43,7 +43,7 @@ to manage all your passwords.
 %{_qtdir}/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwallet5.so
 %{_datadir}/applications/kwalletmanager5-kwalletd.desktop
 %{_datadir}/applications/org.kde.kwalletmanager.desktop
-%{_datadir}/dbus-1/services/org.kde.kwalletmanager5.service
+%{_datadir}/dbus-1/services/org.kde.kwalletmanager.service
 %{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmkwallet5.service
 %{_datadir}/dbus-1/system.d/org.kde.kcontrol.kcmkwallet5.conf
 %{_datadir}/icons/hicolor/*/*/*
