@@ -8,7 +8,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
-Url:		http://www.kde.org/applications/system/kwalletmanager/
+Url:		https://www.kde.org/applications/system/kwalletmanager/
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/utilities/kwalletmanager/-/archive/%{gitbranch}/kwalletmanager-%{gitbranchd}.tar.bz2#/kwalletmanager-%{git}.tar.bz2
 %else
