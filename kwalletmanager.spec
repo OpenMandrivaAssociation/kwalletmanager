@@ -5,7 +5,7 @@ Version:	23.08.5
 Release:	2
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
-Url:		http://www.kde.org/applications/system/kwalletmanager/
+Url:		https://www.kde.org/applications/system/kwalletmanager/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5CoreAddons)
