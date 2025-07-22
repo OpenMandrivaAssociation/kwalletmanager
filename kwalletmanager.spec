@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	KDE Wallet Management Tool
 Name:		kwalletmanager
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
@@ -31,12 +31,17 @@ BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(KF6Crash)
 BuildRequires:	cmake(KF6StatusNotifierItem)
 
+%rename plasma6-kwalletmanager
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 KDE Wallet Manager is for management of the wallets installed on the
 system. The KDE wallet subsystem provides a convenient and secure way
 to manage all your passwords.
 
-%files -f kwalletmanager.lang -f kcmkwallet.lang
+%files -f %{name}.lang
 %doc TODO
 %{_bindir}/kwalletmanager5
 %{_libdir}/libexec/kf6/kauth/kcm_kwallet_helper5
@@ -50,19 +55,3 @@ to manage all your passwords.
 %{_datadir}/metainfo/org.kde.kwalletmanager5.appdata.xml
 %{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmkwallet5.policy
 %{_datadir}/qlogging-categories6/kwalletmanager.categories
-
-#------------------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kwalletmanager-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang kwalletmanager --with-html
-%find_lang kcmkwallet
