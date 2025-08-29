@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	KDE Wallet Management Tool
 Name:		kwalletmanager
-Version:	25.04.3
+Version:	25.08.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2 LGPLv2
 Group:		Graphical desktop/KDE
